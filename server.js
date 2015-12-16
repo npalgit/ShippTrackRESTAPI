@@ -18,6 +18,8 @@ app.get('/', function (req, res)
 });
 app.get('/ups/track/:tracking_number', function (req, res) 
 {
+	 res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 				tracking.trackUPS
 				( 
 				"eshipglobal", 
@@ -45,6 +47,8 @@ app.get('/ups/track', function (req, res)
 });
 app.get('/fedex/track/:tracking_number', function (req, res) 
 {
+	 res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 				tracking.trackFedex
 				( 
 				"9SX2fuvq5EuwSujI", 
@@ -74,6 +78,8 @@ app.get('/fedex/track', function (req, res)
 
 app.get('/usps/track/:tracking_number', function (req, res) 
 {
+	 res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 				tracking.trackUSPS
 				( 
 				"241ESHIP3455", 
