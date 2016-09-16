@@ -97,6 +97,7 @@ app.get('/usps/track', function (req, res)
 
 	res.send("Please enter a tracking numebr");
 });
-app.listen(3000, function () {
+var port = process.env.PORT || 8080;
+app.listen(port, function () {
  console.log('listening on port');
 });
