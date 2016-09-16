@@ -20,9 +20,7 @@ app.get('/ups/track/:tracking_number', function (req, res)
 {
 				tracking.trackUPS
 				( 
-				"eshipglobal", 
-				"e$h1pStudXm", 
-				"FCCDA6BAB35B7FB2",
+			
 				req.params.tracking_number, function (err, data)
 				{
 					if (err) {
@@ -47,10 +45,7 @@ app.get('/fedex/track/:tracking_number', function (req, res)
 {
 				tracking.trackFedex
 				( 
-				"9SX2fuvq5EuwSujI", 
-				"1limvzjV3X1OpS584XjnAknPP", 
-				"212081140",
-				"5291363",
+			
 				req.params.tracking_number, function (err, data)
 				{
 					if (err) {
@@ -76,7 +71,7 @@ app.get('/usps/track/:tracking_number', function (req, res)
 {
 				tracking.trackUSPS
 				( 
-				"241ESHIP3455", 
+				
 				req.params.tracking_number, function (err, data)
 				{
 					if (err) {
